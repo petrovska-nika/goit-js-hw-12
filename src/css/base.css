@@ -30,3 +30,148 @@ main {
 main:has(.back-link) {
   text-align: center;
 }
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 0;
+  margin: 0 auto;
+  max-width: calc(3 * 360px + 2 * 24px);
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+}
+
+.gallery li {
+  flex: 1 1 calc(33.333% - 24px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.sl-overlay {
+  background-color: #2e2f42 !important;
+}
+
+/* form */
+.feedback-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  height: 296px;
+  background: #fff;
+  margin: auto;
+}
+
+.feedback-form label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.feedback-form input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 328px;
+  height: 24px;
+  outline: none;
+  padding: 8px 16px;
+}
+
+.feedback-form input::placeholder {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.feedback-form input:focus::placeholder {
+  opacity: 1;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.feedback-form input:focus {
+  border: 1px solid #000;
+}
+
+.feedback-form textarea {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 328px;
+  height: 64px;
+  outline: none;
+  padding: 8px 16px;
+  resize: none;
+}
+
+.feedback-form textarea::placeholder {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.feedback-form textarea:focus::placeholder {
+  opacity: 1;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.feedback-form textarea:focus {
+  border: 1px solid #000;
+}
+
+.feedback-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  background: blue;
+  border: 0;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.feedback-form button:hover,
+.feedback-form button:focus {
+  background: #446af3;
+}
